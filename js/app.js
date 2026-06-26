@@ -38,7 +38,7 @@ function showGreeting(username) {
     greeting.classList.remove(HIDDEN_CLASS_NAME);
 }
 
-if(localUsername === null) {
+if(savedLocalUsername === null) {
     loginForm.addEventListener("submit", handleLoginSubmit);
     loginForm.classList.remove(HIDDEN_CLASS_NAME);
 }
