@@ -1,38 +1,47 @@
-const caculator = {
-    /**
-     * 둘을 더해보는 어드밴쳐 타임
-     * @param {number} a 
-     * @param {number} b 
-     * @returns {number}
-     */
-    add: function(a, b) {
-        return a + b;
-    },
-    /**
-     * 둘을 빼보는 어드밴쳐 타임
-     * @param {number} a 
-     * @param {number} b 
-     * @returns {number}
-     */
-    sub: function(a, b) {
-        return a - b;
-    },
-    /**
-     * 둘을 곱해보는 어드밴쳐 타임
-     * @param {number} a 
-     * @param {number} b 
-     * @returns {number}
-     */
-    mult: function(a, b) {
-        return a * b;
-    },
-    /**
-     * 둘을 나눠보는 어드밴쳐 타임
-     * @param {number} a 
-     * @param {number} b 
-     * @returns {number}
-     */
-    div: function(a, b) {
-        return a / b;
-    }
-};
+// class name
+const HIDDEN_CLASS_NAME = "hidden";
+
+// localStorage
+const USERNAME_KEY = "username";
+
+// login
+const loginForm = document.getElementById("login-form");
+const loginInput = loginForm.querySelector("input");
+
+// greetingie
+const greeting = document.getElementById("greeting");
+
+const savedLocalUsername = window.localStorage.getItem(USERNAME_KEY);
+
+/**
+ * submit handler
+ * @param {SubmitEvent} event 
+ */
+function handleLoginSubmit(event) {
+    event.preventDefault();
+
+    const username = loginInput.value;
+
+    window.localStorage.setItem(USERNAME_KEY, username);
+
+    loginForm.classList.add(HIDDEN_CLASS_NAME);
+
+    showGreeting(username);
+}
+
+/**
+ * show show show greenchi
+ * @param {string} username
+ */
+function showGreeting(username) {
+    greeting.innerText = `Hello, ${username}!`;
+    greeting.classList.remove(HIDDEN_CLASS_NAME);
+}
+
+if(localUsername === null) {
+    loginForm.addEventListener("submit", handleLoginSubmit);
+    loginForm.classList.remove(HIDDEN_CLASS_NAME);
+}
+else {
+    showGreeting(savedLocalUsername);
+}
