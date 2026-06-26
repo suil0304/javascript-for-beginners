@@ -5,11 +5,20 @@ const HIDDEN_CLASS_NAME = "hidden";
 const USERNAME_KEY = "username";
 
 // login
-const loginForm = document.getElementById("login-form");
+/**
+ * @type {HTMLFormElement}
+ */
+const loginForm = document.querySelector("#login-form");
+/**
+ * @type {HTMLInputElement}
+ */
 const loginInput = loginForm.querySelector("input");
 
 // greetingie
-const greeting = document.getElementById("greeting");
+/**
+ * @type {HTMLHeadingElement}
+ */
+const greeting = document.querySelector("#greeting");
 
 const savedLocalUsername = window.localStorage.getItem(USERNAME_KEY);
 
