@@ -1,4 +1,6 @@
-const WEATHER_API_KEY = "c6450d725294ee82b962f500d0df31a3";
+import "dotenv/config";
+
+const WEATHER_API_KEY = process.env["API_KEY"];
 
 /**
  * @typedef {{
