@@ -1,5 +1,4 @@
-// class name
-const HIDDEN_CLASS_NAME = "hidden";
+import { HIDDEN_CLASS_NAME } from "./const.js";
 
 // localStorage
 const USERNAME_KEY = "username";

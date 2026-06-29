@@ -11,9 +11,22 @@
             <input required maxlength="" type="text" placeholder="What in your name?" name="username">
             <button type="submit">Log In</button>
         </form>
-        <h1 class="hidden" id="greeting"></h1>
         <h2 id="clock">00:00:00</h2>
-        <script src="./js/greeting.js"></script>
-        <script src="./js/clock.js"></script>
+        <h1 class="hidden" id="greeting"></h1>
+        <form id="todo-form">
+            <input type="text" placeholder="Write a To Do and Press Enter" required>
+        </form>
+        <ul id="todo-list"></ul>
+        <div id="quote-block">
+            <span id="quote-content"></span>
+            <span id="quote-author"></span>
+            <span class="hidden" id="quote-from"></span>
+        </div>
+        <script type="module" src="./js/const.js"></script>
+        <script type="module" src="./js/greeting.js"></script>
+        <script type="module" src="./js/clock.js"></script>
+        <script type="module" src="./js/quotes.js"></script>
+        <script type="module" src="./js/background.js"></script>
+        <script type="module" src="./js/todo.js"></script>
     </body>
 </html>
